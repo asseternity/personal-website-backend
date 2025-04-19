@@ -15,3 +15,10 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`App is listening on port ${port}!`);
 });
+
+// brainstorming
+// what routes do I need?
+// what do I need this to do?
+// answer: hold records, give out records in a list when prompted and be able to submit records
+
+// note: expand the schema before publishing - or learn how to migrate without deleting the data
