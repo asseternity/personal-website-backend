@@ -124,6 +124,13 @@ exports.Prisma.ScoreScalarFieldEnum = {
   score: 'score'
 };
 
+exports.Prisma.MetricsScalarFieldEnum = {
+  id: 'id',
+  CVdownloads: 'CVdownloads',
+  gitHubClicks: 'gitHubClicks',
+  linkedInClicks: 'linkedInClicks'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -136,7 +143,8 @@ exports.Prisma.QueryMode = {
 
 
 exports.Prisma.ModelName = {
-  Score: 'Score'
+  Score: 'Score',
+  Metrics: 'Metrics'
 };
 
 /**
