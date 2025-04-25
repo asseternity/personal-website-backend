@@ -162,7 +162,7 @@ const config = {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "postgresql://asseternity:fC3ivjgj@localhost:5432/personal_website_backend"
+        "value": "postgresql://postgres:JiKZGbidHASUELJOMGahankJkWLPjYkZ@caboose.proxy.rlwy.net:36138/railway"
       }
     }
   },
