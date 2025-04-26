@@ -14,7 +14,6 @@ app.use(
     credentials: true,
   })
 );
-app.options("*", cors()); // Allow preflight requests for all routes
 
 // settings
 app.set("views", path.join(__dirname, "views"));
