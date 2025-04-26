@@ -5,6 +5,7 @@ const path = require("node:path");
 const app = express();
 const scoresRoute = require("./routes/scoresRoute");
 const metricsRoute = require("./routes/metricsRoute");
+const cors = require("cors");
 
 // cors
 app.use(
