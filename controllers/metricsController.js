@@ -3,7 +3,7 @@ const prisma = new PrismaClient();
 
 const getIncrimentCV = async (req, res, next) => {
   try {
-    const metricsData = await prisma.metrics.findFirst({
+    let metricsData = await prisma.metrics.findFirst({
       where: {},
     });
     if (!metricsData) {
@@ -19,6 +19,7 @@ const getIncrimentCV = async (req, res, next) => {
       where: { id: metricsData.id },
       data: { CVdownloads: metricsData.CVdownloads + 1 },
     });
+    return res.sendStatus(200);
   } catch (error) {
     return next(error);
   }
@@ -26,7 +27,7 @@ const getIncrimentCV = async (req, res, next) => {
 
 const getIncrimentGH = async (req, res, next) => {
   try {
-    const metricsData = await prisma.metrics.findFirst({
+    let metricsData = await prisma.metrics.findFirst({
       where: {},
     });
     if (!metricsData) {
@@ -42,6 +43,7 @@ const getIncrimentGH = async (req, res, next) => {
       where: { id: metricsData.id },
       data: { gitHubClicks: metricsData.gitHubClicks + 1 },
     });
+    return res.sendStatus(200);
   } catch (error) {
     return next(error);
   }
@@ -49,7 +51,7 @@ const getIncrimentGH = async (req, res, next) => {
 
 const getIncrimentLI = async (req, res, next) => {
   try {
-    const metricsData = await prisma.metrics.findFirst({
+    let metricsData = await prisma.metrics.findFirst({
       where: {},
     });
     if (!metricsData) {
@@ -65,6 +67,7 @@ const getIncrimentLI = async (req, res, next) => {
       where: { id: metricsData.id },
       data: { linkedInClicks: metricsData.linkedInClicks + 1 },
     });
+    return res.sendStatus(200);
   } catch (error) {
     return next(error);
   }

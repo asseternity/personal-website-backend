@@ -1,6 +1,6 @@
 const express = require("express");
 const metricsRoute = express.Router();
-const metricsController = require("../controllers/scoresController");
+const metricsController = require("../controllers/metricsController");
 
 metricsRoute.get("/cv", metricsController.getIncrimentCV);
 metricsRoute.get("/gh", metricsController.getIncrimentGH);

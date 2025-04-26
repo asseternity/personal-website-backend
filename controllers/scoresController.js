@@ -16,10 +16,10 @@ const getScores = async (req, res, next) => {
 };
 const postScore = async (req, res, next) => {
   try {
-    const { name, score } = req.body;
+    const { username, score } = req.body;
     await prisma.score.create({
       data: {
-        name,
+        username,
         score,
       },
     });
