@@ -6,6 +6,14 @@ const app = express();
 const scoresRoute = require("./routes/scoresRoute");
 const metricsRoute = require("./routes/metricsRoute");
 
+// cors
+app.use(
+  cors({
+    origin: ["https://asseternity.github.io", "http://localhost:5173"],
+    credentials: true,
+  })
+);
+
 // settings
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
