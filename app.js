@@ -8,12 +8,15 @@ const metricsRoute = require("./routes/metricsRoute");
 const cors = require("cors");
 
 // cors
-app.use(
-  cors({
-    origin: ["https://asseternity.github.io", "http://localhost:5173"],
-    credentials: true,
-  })
-);
+const corsOptions = {
+  origin: ["https://asseternity.github.io", "http://localhost:5173"],
+  credentials: true,
+  methods: ["GET", "POST", "OPTIONS", "PUT", "PATCH", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 
 // settings
 app.set("views", path.join(__dirname, "views"));
