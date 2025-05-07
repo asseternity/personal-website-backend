@@ -9,7 +9,7 @@ const getScores = async (req, res, next) => {
       },
       take: 10,
     });
-    return res.status(200).json(scores);
+    return res.status(200).json({ scores });
   } catch (error) {
     return next(error);
   }
@@ -43,7 +43,7 @@ const postScore = async (req, res, next) => {
       },
       take: 10,
     });
-    return res.status(200).json(scores);
+    return res.status(200).json({ scores });
   } catch (error) {
     return next(error);
   }
