@@ -40,11 +40,12 @@ app.listen(port, () => {
 // answer: hold records, give out records in a list when prompted and be able to submit records, and track the number of CV downloads, number of github and linkedin clicks
 // note: expand the schema before publishing - or learn how to migrate without deleting the data
 
-// [_] bug: on any further games, score stays at 0 in frontend
-// [_] bug: on any further games, sometimes obstacles double spawn in frontend
-// [_] bug: on any further games, it says "start game" even when you died already once
+// [v] bug: on any further games, score stays at 0 in frontend
+// [v] bug: on any further games, sometimes obstacles double spawn in frontend
+// [v] bug: on any further games, it says "start game" even when you died already once
 // cause of the above - Phaser is not being cleanly reset between sessions.
-// [_] have scores show at restart
+// [v] have scores show at restart
+// [_] css the scores pretty
 // [_] let the username field not be unique
 // [_] write in your name field if the score is top 5
 // [_] remove the non top 5 records
