@@ -45,7 +45,9 @@ app.listen(port, () => {
 // [v] bug: on any further games, it says "start game" even when you died already once
 // cause of the above - Phaser is not being cleanly reset between sessions.
 // [v] have scores show at restart
-// [_] css the scores pretty
 // [_] let the username field not be unique
 // [_] write in your name field if the score is top 5
 // [_] remove the non top 5 records
+// [_] bug: "high scores loading..." never changes.
+// solution: get the parts after the game is done completely away from phaser and into just react
+// [_] css the scores pretty
