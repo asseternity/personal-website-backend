@@ -49,7 +49,9 @@ app.listen(port, () => {
 // [v] auto remove the non top 5 records
 // [v] redo the backend - redo the postScore thing to assume that we're top 5
 // [v] redo the backend - add a route to check if we're top 5
-// [_] write in your name field if the score is top 5
-// [_] redo the frontend - bug: "high scores loading..." never changes.
+// [v] decide how the frontend will look
+// [v] write in your name field if the score is top 5
+// [v] redo the frontend - bug: "high scores loading..." never changes.
 // solution: get the parts after the game is done completely away from phaser and into just react
+// [_] redo the frontend - debug functionality
 // [_] redo the frontend - css the scores pretty

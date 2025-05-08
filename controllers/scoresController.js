@@ -65,4 +65,4 @@ const postNewScore = async (req, res, next) => {
   }
 };
 
-module.exports = { getScores, postScore };
+module.exports = { getScores, postCheckScore, postNewScore };
