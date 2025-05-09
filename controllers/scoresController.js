@@ -27,7 +27,7 @@ const postCheckScore = async (req, res, next) => {
     } else {
       return res.status(200).json({ topFive: false });
     }
-  } catch (err) {
+  } catch (error) {
     return next(error);
   }
 };
