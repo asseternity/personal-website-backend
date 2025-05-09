@@ -53,5 +53,7 @@ app.listen(port, () => {
 // [v] write in your name field if the score is top 5
 // [v] redo the frontend - bug: "high scores loading..." never changes.
 // solution: get the parts after the game is done completely away from phaser and into just react
-// [_] redo the frontend - name writing in doesn't work
-// [_] redo the frontend - css the scores pretty
+// [v] redo the frontend - name writing in doesn't work
+// [v] redo the frontend - only if you show the top 5 BEFORE playing does it actually show
+// [v] redo the frontend - fix css
+// [_] redo the frontend - w and s are blocked by phaser
