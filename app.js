@@ -56,4 +56,9 @@ app.listen(port, () => {
 // [v] redo the frontend - name writing in doesn't work
 // [v] redo the frontend - only if you show the top 5 BEFORE playing does it actually show
 // [v] redo the frontend - fix css
-// [_] redo the frontend - w and s are blocked by phaser
+// [v] redo the frontend - w and s are blocked by phaser
+// [v] redo the frontend - hovering on some buttons changes their size
+// [_] hook up the metrics
+// [_] animate the bird flying
+// [_] make the game genuinely fun
+// [_] push everything
