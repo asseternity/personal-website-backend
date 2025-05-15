@@ -58,7 +58,7 @@ app.listen(port, () => {
 // [v] redo the frontend - fix css
 // [v] redo the frontend - w and s are blocked by phaser
 // [v] redo the frontend - hovering on some buttons changes their size
-// [_] hook up the metrics
-// [_] animate the bird flying
-// [_] make the game genuinely fun
+// [v] hook up the metrics
+// [v] animate the bird flying
+// [v] make the game genuinely fun
 // [_] push everything
