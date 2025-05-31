@@ -61,4 +61,3 @@ app.listen(port, () => {
 // [v] hook up the metrics
 // [v] animate the bird flying
 // [v] make the game genuinely fun
-// [_] push everything
