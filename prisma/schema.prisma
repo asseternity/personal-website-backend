@@ -19,4 +19,8 @@ model Metrics {
   CVdownloads     Int
   gitHubClicks    Int
   linkedInClicks  Int
+  loungeClicks    Int
+  vivaClicks      Int
+  textrpgClicks   Int
+  mapquizClicks   Int
 }
