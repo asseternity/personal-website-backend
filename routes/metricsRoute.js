@@ -2,8 +2,12 @@ const express = require("express");
 const metricsRoute = express.Router();
 const metricsController = require("../controllers/metricsController");
 
-metricsRoute.get("/cv", metricsController.getIncrimentCV);
-metricsRoute.get("/gh", metricsController.getIncrimentGH);
-metricsRoute.get("/li", metricsController.getIncrimentLI);
+metricsRoute.get("/cv", metricsController.getIncrementCV);
+metricsRoute.get("/gh", metricsController.getIncrementGH);
+metricsRoute.get("/li", metricsController.getIncrementLI);
+metricsRoute.get("/lounge", metricsController.getIncrementLounge);
+metricsRoute.get("/viva", metricsController.getIncrementViva);
+metricsRoute.get("/textRPG", metricsController.getIncrementTextRPG);
+metricsRoute.get("/mapQuiz", metricsController.getIncrementMapQuic);
 
 module.exports = metricsRoute;
