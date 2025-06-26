@@ -16,6 +16,7 @@ const getIncrementCV = async (req, res, next) => {
           vivaClicks: 0,
           textrpgClicks: 0,
           mapquizClicks: 0,
+          shopClicks: 0,
         },
       });
     }
@@ -44,6 +45,7 @@ const getIncrementGH = async (req, res, next) => {
           vivaClicks: 0,
           textrpgClicks: 0,
           mapquizClicks: 0,
+          shopClicks: 0,
         },
       });
     }
@@ -72,6 +74,7 @@ const getIncrementLI = async (req, res, next) => {
           vivaClicks: 0,
           textrpgClicks: 0,
           mapquizClicks: 0,
+          shopClicks: 0,
         },
       });
     }
@@ -98,6 +101,7 @@ getIncrementLounge = async (req, res, next) => {
           vivaClicks: 0,
           textrpgClicks: 0,
           mapquizClicks: 0,
+          shopClicks: 0,
         },
       });
     }
@@ -123,6 +127,7 @@ getIncrementViva = async (req, res, next) => {
           vivaClicks: 0,
           textrpgClicks: 0,
           mapquizClicks: 0,
+          shopClicks: 0,
         },
       });
     }
@@ -148,6 +153,7 @@ getIncrementTextRPG = async (req, res, next) => {
           vivaClicks: 0,
           textrpgClicks: 0,
           mapquizClicks: 0,
+          shopClicks: 0,
         },
       });
     }
@@ -173,12 +179,39 @@ getIncrementMapQuic = async (req, res, next) => {
           vivaClicks: 0,
           textrpgClicks: 0,
           mapquizClicks: 0,
+          shopClicks: 0,
         },
       });
     }
     await prisma.metrics.update({
       where: { id: metricsData.id },
       data: { loungeClicks: metricsData.mapquizClicks + 1 },
+    });
+  } catch (err) {
+    return next(err);
+  }
+};
+
+getIncrementShop = async (req, res, next) => {
+  try {
+    let metricsData = await prisma.metrics.findFirst({ where: {} });
+    if (!metricsData) {
+      metricsData = await prisma.metrics.create({
+        data: {
+          CVdownloads: 0,
+          gitHubClicks: 0,
+          linkedInClicks: 0,
+          loungeClicks: 0,
+          vivaClicks: 0,
+          textrpgClicks: 0,
+          mapquizClicks: 0,
+          shopClicks: 0,
+        },
+      });
+    }
+    await prisma.metrics.update({
+      where: { id: metricsData },
+      data: { shopClicks: metricsData.shopClicks + 1 },
     });
   } catch (err) {
     return next(err);
@@ -193,4 +226,5 @@ module.exports = {
   getIncrementViva,
   getIncrementTextRPG,
   getIncrementMapQuic,
+  getIncrementShop,
 };
