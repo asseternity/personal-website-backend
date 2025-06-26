@@ -23,4 +23,5 @@ model Metrics {
   vivaClicks      Int       @default(0)
   textrpgClicks   Int       @default(0)
   mapquizClicks   Int       @default(0)
+  shopClicks      Int       @default(0)
 }
