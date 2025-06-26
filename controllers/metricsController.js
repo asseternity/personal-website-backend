@@ -210,7 +210,7 @@ getIncrementShop = async (req, res, next) => {
       });
     }
     await prisma.metrics.update({
-      where: { id: metricsData },
+      where: { id: metricsData.id },
       data: { shopClicks: metricsData.shopClicks + 1 },
     });
   } catch (err) {
