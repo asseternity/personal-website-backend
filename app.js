@@ -9,7 +9,11 @@ const cors = require("cors");
 
 // cors
 const corsOptions = {
-  origin: ["https://asseternity.github.io", "http://localhost:5173"],
+  origin: [
+    "https://asseternity.github.io",
+    "http://localhost:5173",
+    "https://assetn-portfolio.netlify.app/",
+  ],
   credentials: true,
   methods: ["GET", "POST", "OPTIONS", "PUT", "PATCH", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
