@@ -12,7 +12,7 @@ const corsOptions = {
   origin: [
     "https://asseternity.github.io",
     "http://localhost:5173",
-    "https://assetn-portfolio.netlify.app/",
+    "https://assetn-portfolio.netlify.app",
   ],
   credentials: true,
   methods: ["GET", "POST", "OPTIONS", "PUT", "PATCH", "DELETE"],
