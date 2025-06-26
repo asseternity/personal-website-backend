@@ -133,7 +133,7 @@ getIncrementViva = async (req, res, next) => {
     }
     await prisma.metrics.update({
       where: { id: metricsData.id },
-      data: { loungeClicks: metricsData.vivaClicks + 1 },
+      data: { vivaClicks: metricsData.vivaClicks + 1 },
     });
   } catch (err) {
     return next(err);
@@ -159,7 +159,7 @@ getIncrementTextRPG = async (req, res, next) => {
     }
     await prisma.metrics.update({
       where: { id: metricsData.id },
-      data: { loungeClicks: metricsData.textrpgClicks + 1 },
+      data: { textrpgClicks: metricsData.textrpgClicks + 1 },
     });
   } catch (err) {
     return next(err);
@@ -185,7 +185,7 @@ getIncrementMapQuic = async (req, res, next) => {
     }
     await prisma.metrics.update({
       where: { id: metricsData.id },
-      data: { loungeClicks: metricsData.mapquizClicks + 1 },
+      data: { mapquizClicks: metricsData.mapquizClicks + 1 },
     });
   } catch (err) {
     return next(err);
