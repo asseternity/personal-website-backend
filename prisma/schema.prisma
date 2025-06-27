@@ -25,3 +25,21 @@ model Metrics {
   mapquizClicks   Int       @default(0)
   shopClicks      Int       @default(0)
 }
+
+model BlogPost {
+  id              Int       @id @default(autoincrement())
+  createdAt       DateTime  @default(now())
+  title           String
+  content         String
+  comments        Comment[]
+}
+
+model Comment {
+  id              Int       @id @default(autoincrement())
+  createdAt       DateTime  @default(now())
+  author          String
+  email           String
+  content         String
+  blogPostId      Int
+  blogPost        BlogPost  @relation(fields: [blogPostId], references: [id])
+}

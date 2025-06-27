@@ -5,6 +5,7 @@ const path = require("node:path");
 const app = express();
 const scoresRoute = require("./routes/scoresRoute");
 const metricsRoute = require("./routes/metricsRoute");
+const blogRoute = require("./routes/blogRoute");
 const cors = require("cors");
 
 // cors
@@ -31,6 +32,7 @@ app.use(express.json());
 // mount routes
 app.use("/api/scores", scoresRoute);
 app.use("/api/metrics", metricsRoute);
+app.use("/api/blog", blogRoute);
 
 // launch
 const port = process.env.PORT || 3000;
