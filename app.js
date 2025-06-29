@@ -14,7 +14,7 @@ const corsOptions = {
     "https://asseternity.github.io",
     "http://localhost:5173",
     "https://assetn-portfolio.netlify.app",
-    "https://assetn.dev/",
+    "https://assetn.dev",
   ],
   credentials: true,
   methods: ["GET", "POST", "OPTIONS", "PUT", "PATCH", "DELETE"],
