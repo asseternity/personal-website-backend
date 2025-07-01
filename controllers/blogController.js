@@ -22,29 +22,6 @@ const getAllBlogPosts = async (req, res, next) => {
   }
 };
 
-const postNewBlogPost = async (req, res, next) => {
-  try {
-    const title = req.body.title;
-    const content = req.body.content;
-    const adminPassword = req.body.adminPassword;
-    if (!title || !content) {
-      return res.status(400).json({ error: "Missing required fields" });
-    }
-    if (adminPassword !== process.env.ADMIN_PW) {
-      return res.status(403).json({ error: "Unauthorized" });
-    }
-    const newBlogPost = await prisma.blogPost.create({
-      data: {
-        title: title,
-        content: content,
-      },
-    });
-    return res.status(201).json({ blogPost: newBlogPost });
-  } catch (err) {
-    return next(err);
-  }
-};
-
 const postNewComment = async (req, res, next) => {
   try {
     const postId = parseInt(req.body.postId);
@@ -74,4 +51,4 @@ const postNewComment = async (req, res, next) => {
   }
 };
 
-module.exports = { getAllBlogPosts, postNewBlogPost, postNewComment };
+module.exports = { getAllBlogPosts, postNewComment };

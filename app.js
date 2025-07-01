@@ -6,6 +6,7 @@ const app = express();
 const scoresRoute = require("./routes/scoresRoute");
 const metricsRoute = require("./routes/metricsRoute");
 const blogRoute = require("./routes/blogRoute");
+const { syncBlogPosts } = require("./helper-functions/blogSync");
 const cors = require("cors");
 
 // cors
@@ -40,6 +41,9 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`App is listening on port ${port}!`);
 });
+
+// sync blog posts
+syncBlogPosts();
 
 // brainstorming
 // what routes do I need?
