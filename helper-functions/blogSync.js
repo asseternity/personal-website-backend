@@ -24,7 +24,7 @@ const syncBlogPosts = async () => {
 
   for (const file of files) {
     const blogData = getBlogPostData(path.join(blogDirectory, file));
-    const exists = await prisma.blogPost.findUnique({
+    const exists = await prisma.blogPost.findFirst({
       where: { title: blogData.title },
     });
     if (!exists) {
