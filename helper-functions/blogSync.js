@@ -4,7 +4,7 @@ const matter = require("gray-matter");
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
-const blogDirectory = path.join(__dirname, "blog");
+const blogDirectory = path.join(__dirname, "..", "blogPosts");
 
 const getBlogPostFiles = () => {
   return fs.readdirSync(blogDirectory).filter((file) => file.endsWith(".md"));
