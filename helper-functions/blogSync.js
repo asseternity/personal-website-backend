@@ -1,8 +1,7 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { PrismaClient } from "@prisma/client";
-import { get } from "http";
+const fs = require("fs");
+const path = require("path");
+const matter = require("gray-matter");
+const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
 const blogDirectory = path.join(__dirname, "blog");
